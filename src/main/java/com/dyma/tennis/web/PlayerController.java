@@ -30,7 +30,7 @@ public class PlayerController {
             @ApiResponse(responseCode = "200", description = "Players list",
                     content = {@Content(mediaType = "application/json",
                             array = @ArraySchema(schema = @Schema(implementation = Player.class)))}),
-            @ApiResponse(responseCode = "403", description = "Connected user is not authorized to perform this action.")
+            @ApiResponse(responseCode = "403", description = "This user is not authorized to perform this action.")
 
     })
     @GetMapping
@@ -46,7 +46,7 @@ public class PlayerController {
             @ApiResponse(responseCode = "404", description = "Player with specified last name was not found.",
                     content = {@Content(mediaType = "application/json",
                             schema = @Schema(implementation = Error.class))}),
-            @ApiResponse(responseCode = "403", description = "Connected user is not authorized to perform this action.")
+            @ApiResponse(responseCode = "403", description = "This user is not authorized to perform this action.")
 
     })
     @GetMapping("{lastName}")
@@ -62,7 +62,7 @@ public class PlayerController {
             @ApiResponse(responseCode = "400", description = "Player with specified last name already exists.",
                     content = {@Content(mediaType = "application/json",
                             schema = @Schema(implementation = Error.class))}),
-            @ApiResponse(responseCode = "403", description = "Connected user is not authorized to perform this action.")
+            @ApiResponse(responseCode = "403", description = "This user is not authorized to perform this action.")
 
     })
     @PostMapping
@@ -78,7 +78,7 @@ public class PlayerController {
             @ApiResponse(responseCode = "404", description = "Player with specified last name was not found.",
                     content = {@Content(mediaType = "application/json",
                             schema = @Schema(implementation = Error.class))}),
-            @ApiResponse(responseCode = "403", description = "Connected user is not authorized to perform this action.")
+            @ApiResponse(responseCode = "403", description = "This user is not authorized to perform this action.")
 
     })
     @PutMapping
@@ -92,7 +92,7 @@ public class PlayerController {
             @ApiResponse(responseCode = "404", description = "Player with specified last name was not found.",
                     content = {@Content(mediaType = "application/json",
                             schema = @Schema(implementation = Error.class))}),
-            @ApiResponse(responseCode = "403", description = "Connected user is not authorized to perform this action.")
+            @ApiResponse(responseCode = "403", description = "This user is not authorized to perform this action.")
 
     })
     @DeleteMapping("{lastName}")
